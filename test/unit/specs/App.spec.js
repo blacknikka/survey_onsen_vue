@@ -4,7 +4,7 @@ import store from '@/store';
 
 describe('App.vue', () => {
   const Constructor = Vue.extend(App);
-  const vm = new Constructor({ store }).$mount();
+  const vm = new Constructor({ store, }).$mount();
 
   it('provides a closed menu by default', () => {
     expect(vm.menuIsOpen)

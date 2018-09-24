@@ -16,9 +16,13 @@
     <v-ons-list-title>Vue.js Essential Links</v-ons-list-title>
     <v-ons-list>
       <v-ons-list-item v-for="item in essentialLinks" @click="goTo(item.link)" :key="item.link">
-        <div class="left"><v-ons-icon fixed-width :icon="item.icon"></v-ons-icon></div>
+        <div class="left">
+          <v-ons-icon fixed-width :icon="item.icon"></v-ons-icon>
+        </div>
         <div class="center">{{ item.label }}</div>
-        <div class="right"><v-ons-icon icon="fa-external-link"></v-ons-icon></div>
+        <div class="right">
+          <v-ons-icon icon="fa-external-link"></v-ons-icon>
+        </div>
       </v-ons-list-item>
     </v-ons-list>
 
@@ -46,43 +50,43 @@
 <script>
 export default {
   name: 'home',
-  data () {
+  data() {
     return {
       msg: 'Welcome',
       essentialLinks: [
         {
           label: 'Core Docs',
           link: 'https://vuejs.org',
-          icon: 'fa-book'
+          icon: 'fa-book',
         },
         {
           label: 'Community Chat',
           link: 'https://chat.vuejs.org',
-          icon: 'fa-commenting'
+          icon: 'fa-commenting',
         },
         {
           label: 'Forum',
           link: 'https://forum.vuejs.org',
-          icon: 'ion-chatboxes'
+          icon: 'ion-chatboxes',
         },
         {
           label: 'Twitter',
           link: 'https://twitter.com/vuejs',
-          icon: 'fa-twitter'
+          icon: 'fa-twitter',
         },
         {
           label: 'Docs for this template',
           link: 'http://vuejs-templates.github.io/webpack/',
-          icon: 'fa-file-text'
-        }
-      ]
+          icon: 'fa-file-text',
+        },
+      ],
     };
   },
   methods: {
-    goTo (url) {
+    goTo(url) {
       window.open(url, '_blank');
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -108,7 +112,8 @@ ons-card {
   text-align: center;
 }
 
-ons-list-item, ons-card {
+ons-list-item,
+ons-card {
   cursor: pointer;
 }
 </style>

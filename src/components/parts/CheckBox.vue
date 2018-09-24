@@ -1,5 +1,5 @@
 <template>
-  <v-ons-card v-if="IsRadioStyle">
+  <v-ons-card v-if="IsCheckBoxStyle">
     <div class="title">
       {{question.title}}
     </div>
@@ -8,8 +8,8 @@
       <v-ons-list>
         <v-ons-list-item v-for="(select, index) in question.items" :key="index">
           <label class="left">
-            <v-ons-radio :input-id="'radio-' + index" :value="select" v-model="selected">
-            </v-ons-radio>
+            <v-ons-checkbox :input-id="'checkbox-' + index" :value="select" v-model="selected">
+            </v-ons-checkbox>
           </label>
           <label :for="'radio-' + index" class="center">
             {{ select }}
@@ -27,12 +27,12 @@ export default {
   },
   data() {
     return {
-      selected: '',
+      selected: [],
     };
   },
   computed: {
-    IsRadioStyle() {
-      return this.question.type === 'SelectOne';
+    IsCheckBoxStyle() {
+      return this.question.type === 'SelectMany';
     },
   },
 };

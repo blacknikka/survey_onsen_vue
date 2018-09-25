@@ -2,12 +2,14 @@
   <div>
     <radio-button v-if="GetType === 'SelectOne'" :question="question"/>
     <check-box v-if="GetType === 'SelectMany'" :question="question"/>
+    <text-input v-if="GetType === 'WriteAny'" :question="question"/>
   </div>
 </template>
 
 <script>
 import RadioButton from '@/components/parts/RadioButton';
 import CheckBox from '@/components/parts/CheckBox';
+import TextInput from '@/components/parts/TextBox';
 
 export default {
   props: {
@@ -21,6 +23,7 @@ export default {
   components: {
     RadioButton,
     CheckBox,
+    TextInput,
   },
 };
 </script>

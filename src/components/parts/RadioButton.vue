@@ -1,5 +1,5 @@
 <template>
-  <v-ons-card v-if="IsRadioStyle">
+  <v-ons-card>
     <div class="title">
       {{question.title}}
     </div>
@@ -29,11 +29,6 @@ export default {
     return {
       selected: '',
     };
-  },
-  computed: {
-    IsRadioStyle() {
-      return this.question.type === 'SelectOne';
-    },
   },
 };
 </script>

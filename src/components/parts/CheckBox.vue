@@ -1,5 +1,5 @@
 <template>
-  <v-ons-card v-if="IsCheckBoxStyle">
+  <v-ons-card>
     <div class="title">
       {{question.title}}
     </div>
@@ -29,11 +29,6 @@ export default {
     return {
       selected: [],
     };
-  },
-  computed: {
-    IsCheckBoxStyle() {
-      return this.question.type === 'SelectMany';
-    },
   },
 };
 </script>

@@ -42,6 +42,11 @@ export default {
           ],
           type: 'SelectOne',
         },
+        {
+          title: 'Q4',
+          body: 'How do you think about this web site? (200 characters max)',
+          type: 'WriteAny',
+        },
       ],
     };
   },

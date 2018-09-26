@@ -1,11 +1,15 @@
 <template>
-  <v-ons-page>
-    <question-item v-for="(item, index) in question" :key="index" :question="item" />
-  </v-ons-page>
+  <div>
+    <v-ons-page>
+      <question-item v-for="(item, index) in question" :key="index" :question="item" />
+      <submit-button />
+    </v-ons-page>
+  </div>
 </template>
 
 <script>
 import QuestionItem from '@/components/parts/QuestionItem';
+import SubmitButton from '@/components/parts/SubmitButton';
 
 export default {
   data() {
@@ -52,6 +56,7 @@ export default {
   },
   components: {
     QuestionItem,
+    SubmitButton,
   },
 };
 </script>
